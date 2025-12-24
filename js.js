@@ -1,38 +1,39 @@
+// select all counter containers
+const containers = document.querySelectorAll('.totalParts');
 
-const resetBtn = document.getElementById('resetBtn');
+containers.forEach(container => {
+  const countBtn = container.querySelector('.countBtn');
+  const resetBtn = container.querySelector('.resetBtn');
+  const totalDisplay = container.querySelector('.totalDisplay');
 
-const countBtn = document.getElementById('countBtn');
-const totalDisplay = document.getElementById('totalDisplay');
-const circleContainer = document.getElementById('totalParts'); // outer div with .gradient-border
+  // parse count and maxCount from span text
+  let [count, maxCount] = totalDisplay.textContent.split('/').map(Number);
 
-// Parse maxCount from HTML
-let [count, maxCount] = totalDisplay.textContent.split('/').map(Number);
+  // Count button
+  countBtn.addEventListener('click', () => {
+    if (count < maxCount) {
+      count++;
+      totalDisplay.textContent = `${count}/${maxCount}`;
 
+      // change text color to yellow with glow
+      totalDisplay.style.color = 'yellow';
+      totalDisplay.style.textShadow = '0 0 10px yellow';
 
-countBtn.addEventListener('click', () => {
-  if (count < maxCount) {
-    count++;
-    totalDisplay.textContent = `${count}/${maxCount}`;
+      // highlight when max reached
+      if (count === maxCount) {
+        totalDisplay.classList.add('max-reached');
+        container.classList.add('max-reached');
+      }
+    }
+  });
 
-    // change text color to yellow with glow
-    totalDisplay.style.color = 'yellow';
-    totalDisplay.style.textShadow = '0 0 10px yellow';
-
-    // if max reached, add highlight classes
-    if (count === maxCount) {
-      totalDisplay.classList.add('max-reached');  // circle highlight
-      circleContainer.classList.add('max-reached'); // card highlight
-    }  else {
-  countBtn.disabled = false;
-  }
-  }
-});
-
-resetBtn.addEventListener('click', () => {
-  count = 0;
-  totalDisplay.textContent = `0/${maxCount}`;
-  totalDisplay.style.color = 'white';
-  totalDisplay.style.textShadow = 'none';
-  circleContainer.classList.remove('max-reached');
-  totalDisplay.classList.remove('max-reached');
+  // Reset button
+  resetBtn.addEventListener('click', () => {
+    count = 0;
+    totalDisplay.textContent = `0/${maxCount}`;
+    totalDisplay.style.color = 'white';
+    totalDisplay.style.textShadow = 'none';
+    totalDisplay.classList.remove('max-reached');
+    container.classList.remove('max-reached');
+  });
 });
