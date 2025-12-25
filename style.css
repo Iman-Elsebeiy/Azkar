@@ -3,7 +3,7 @@
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #0b1026, #cc2448, #0b1026);
+  background: linear-gradient(to bottom, #0b1026,#0b1026, #cc3656, #0b1026, #0b1026);
   /* overflow: hidden; */
   /* position: relative; */
 }
@@ -91,7 +91,7 @@
 
 .night-sky::before {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   inset: 0;
   background: radial-gradient(
     circle at 80% 20%,
@@ -153,7 +153,7 @@
   z-index: 1;
   border-radius: 50px;
   border: 2px solid transparent;
-  background: linear-gradient(#0b1026,#3352f0, #192458, #0b1026);
+  background: linear-gradient(#0b1026,#1e2f85, #192458, #0b1026);
   color: white;
   font-weight: bold;
   padding: 0.5rem 2rem;
