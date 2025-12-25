@@ -19,10 +19,9 @@ body{
 .stars {
   position: fixed;
   inset: 0;
-  width: 3px;
-  height: 2px;
+  width: 2px;
+  height: 1px;
   background: transparent;
-  pointer-events: none;
 
   box-shadow:
     5vw 10vh #fff,
@@ -42,9 +41,42 @@ body{
     70vw 55vh #fff,
     90vw 25vh #fff;
 
-  animation: twinkle 3s infinite alternate;
+  animation: twinkle 2s infinite alternate;
   pointer-events: none;
 }
+.stars-small {
+  width: 0.5px;
+  height: 1px;
+  box-shadow:
+    8vw 20vh #fff,
+    18vw 50vh #fff,
+    28vw 80vh #fff,
+    38vw 30vh #fff,
+    48vw 70vh #fff,
+    58vw 40vh #fff,
+    68vw 90vh #fff,
+    78vw 15vh #fff,
+    88vw 60vh #fff,
+    98vw 35vh #fff,
+    12vw 85vh #fff,
+    22vw 25vh #fff,
+    32vw 65vh #fff,
+    52vw 5vh #fff,
+    72vw 45vh #fff,
+    92vw 95vh #fff;
+
+}
+.stars-big {
+  border-radius: 50%;
+  width: 3.85px;
+  height: 2.75px;
+  box-shadow:
+    22vw 30vh #fff,
+    62vw 60vh #fff,
+    93vw 79vh #fff;
+}
+
+
 .night-sky::before {
   content: "";
   position: absolute;
@@ -66,26 +98,28 @@ body{
 /* Gradient card */
 .gradient-border {
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1rem;
   background:
-    linear-gradient(#0b1026, #0b1026) padding-box,  /* inner dark background */
-    linear-gradient(135deg, #443411, #6b6625) border-box; /* gradient border */
-  border: 2px solid transparent;
-  transition: all 0.3s ease; /* smooth transition for border changes */
+    linear-gradient(#0b1026, #0b1026) padding-box, /* inner dark background */
+    linear-gradient(135deg, #6a85ff, #1e4558) border-box;
+    border-color: rgba(129, 110, 51, 0.85) rgba(1, 42, 63, 0.85) !important;
+    box-shadow: 0 0 15px rgb(1, 9, 49);
+
+  transition: all 0.3s ease; /*smooth transition for border changes */
 }
 
 /* Yellow highlight when max reached */
 .gradient-border.max-reached {
-  border-color: yellow !important;
+  border-color: #504c14 !important;
   box-shadow: 0 0 15px yellow;
 }
 
 /* Circle highlight */
 .circle-total-btn.max-reached {
-  border-color: yellow;
-  box-shadow: 0 0 10px yellow;
-  color: yellow;
-  text-shadow: 0 0 10px yellow;
+  border-color: #9e9628 !important;
+  box-shadow: 0 0 10px #b6ac25;
+  color: rgb(92, 92, 14);
+  text-shadow: 0 0 10px #504c14;
 }
 
 
@@ -101,7 +135,7 @@ body{
   z-index: 1;
   border-radius: 50px;
   border: 2px solid transparent;
-  background: linear-gradient(#0b1026, #0b1026);
+  background: linear-gradient(#192458, #0b1026);
   color: white;
   font-weight: bold;
   padding: 0.5rem 2rem;
@@ -114,7 +148,7 @@ body{
   position: absolute;
   inset: 0;
   border-radius: 50px;
-  background: linear-gradient(135deg, #020a2c, #153b4e);
+  background: linear-gradient(#020a2c, #0e2b3a);
   z-index: -1;
   transition: transform 0.3s;
   transform: scaleX(0);
@@ -178,3 +212,61 @@ body{
   border: 2px solid transparent;
   cursor: pointer;
 }
+
+.moon-container {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      margin: 10px auto;
+    }
+
+    .moon {
+      position: absolute;
+      font-size: 3rem;
+      animation: circleMove 3s linear infinite;
+    }
+
+    @keyframes circleMove {
+      0% {
+        transform: translate(80px, 0);
+      }
+      25% {
+        transform: translate(160px, 80px);
+      }
+      50% {
+        transform: translate(80px, 160px);
+      }
+      75% {
+        transform: translate(0, 80px);
+      }
+      100% {
+        transform: translate(80px, 0);
+      }
+    }
+
+     .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .line {
+      height: 2px;
+      width: 120px;
+      background: linear-gradient(to right, transparent, #53460c);
+    }
+
+    .line.right {
+      background: linear-gradient(to left, transparent, #53460c);
+    }
+
+    .circle {
+      width: 18px;
+      height: 18px;
+      border: 1px solid #53460c;
+      border-radius: 50%;
+      margin: 0 15px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.6);
+    }

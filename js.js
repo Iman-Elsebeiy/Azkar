@@ -16,8 +16,8 @@ containers.forEach(container => {
       totalDisplay.textContent = `${count}/${maxCount}`;
 
       // change text color to yellow with glow
-      totalDisplay.style.color = 'yellow';
-      totalDisplay.style.textShadow = '0 0 10px yellow';
+      totalDisplay.style.color = '#f5e830ff';
+      totalDisplay.style.textShadow = '0 0 10px #8a8320ff';
 
       // highlight when max reached
       if (count === maxCount) {
