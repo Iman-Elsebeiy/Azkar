@@ -16,13 +16,14 @@ containers.forEach(container => {
       totalDisplay.textContent = `${count}/${maxCount}`;
 
       // change text color to yellow with glow
-      totalDisplay.style.color = '#f5e830ff';
-      totalDisplay.style.textShadow = '0 0 10px #8a8320ff';
+totalDisplay.classList.add("active");
 
       // highlight when max reached
       if (count === maxCount) {
         totalDisplay.classList.add('max-reached');
         container.classList.add('max-reached');
+        container.classList.add("shake");
+
       }
     }
   });
@@ -68,17 +69,59 @@ containers.forEach(container => {
 // });
 
 document.addEventListener("DOMContentLoaded", () => {
+
   // Load click sound
-  const clickSound = new Audio("click.mp3"); //path
+  const clickSound = new Audio("click.wav");
+  clickSound.preload = "auto";
 
-  // Select buttons
-  const buttons = document.querySelectorAll(".resetBtn, .countBtn");
+  // select all counter containers
+  const containers = document.querySelectorAll('.totalParts');
 
-  // Add click event
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      clickSound.currentTime = 0; // restart sound
+  containers.forEach(container => {
+    const countBtn = container.querySelector('.countBtn');
+    const resetBtn = container.querySelector('.resetBtn');
+    const totalDisplay = container.querySelector('.totalDisplay');
+
+    let [count, maxCount] = totalDisplay.textContent.split('/').map(Number);
+
+    // Count button
+    countBtn.addEventListener('click', () => {
+      if (count < maxCount) {
+        count++;
+        totalDisplay.textContent = `${count}/${maxCount}`;
+        totalDisplay.classList.add("active");
+
+        clickSound.currentTime = 0;
+        clickSound.play();
+
+        if (count === maxCount) {
+          totalDisplay.classList.add('max-reached');
+          container.classList.add('max-reached', 'shake');
+        }
+      }
+    });
+
+    // Reset button
+    resetBtn.addEventListener('click', () => {
+      count = 0;
+      totalDisplay.textContent = `0/${maxCount}`;
+      totalDisplay.classList.remove('active', 'max-reached');
+      container.classList.remove('max-reached', 'shake');
+
+      clickSound.currentTime = 0;
       clickSound.play();
     });
+
+    // Keyboard accessibility
+    [countBtn, resetBtn].forEach(btn => {
+      btn.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+
   });
+
 });
