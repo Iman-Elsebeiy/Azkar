@@ -2,9 +2,10 @@
 .night-sky {
   min-height: 100vh;
   margin: 0;
-  background: linear-gradient(to bottom, #0b1026, #1b2a4e);
+  padding: 0;
+  background: linear-gradient(to bottom, #0b1026, #cc2448, #0b1026);
   /* overflow: hidden; */
-  position: relative;
+  /* position: relative; */
 }
 
 /* stars layer */
@@ -15,8 +16,7 @@
   width: 100%;
   height: 100%;
   background: transparent;
-  direction: ltr !important;
-  transform: none !important;
+ 
   pointer-events: none;
   z-index: 0;
 }
@@ -47,7 +47,7 @@
     70vw 55vh #fff,
     90vw 25vh #fff;
     
-direction: ltr !important;
+
   animation: twinkle 2s infinite alternate;
   pointer-events: none;
 }
@@ -71,7 +71,7 @@ direction: ltr !important;
     52vw 5vh #fff,
     72vw 45vh #fff,
     92vw 95vh #fff;
-    direction: ltr !important;
+    
 
 }
 .stars-big {
