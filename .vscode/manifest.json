@@ -3,15 +3,16 @@
   "manifest_version": 3,
   "name": "Azkar Almasaa",
   "version": "1.0",
-  "description": "Evening Azkar with counters, stars, moon, and click sounds!",
+  "description": "Evening Azkar bring peace to your heart with counters, stars, moon, and click sounds!",
   "icons": {
-    "16": "azkar.png",
-    "48": "azkar.png",
-    "128": "azkar.png"
+    "16": "Duaa.png",
+    "48": "Duaa.png",
+    "128": "Duaa.png"
   },
   "action": {
     "default_popup": "index.html",
-    "default_icon": "azkar.png"
+    "default_icon": "Duaa.png",
+    "default_title": "Azkar Almasaa"
   },
   "permissions": []
 }
