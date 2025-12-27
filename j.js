@@ -1,4 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async() => {
+
+      await addDateToHtml();
+      document.querySelector(".bottom-section").style.visibility = "visible";
+
 
       const clickSound = new Audio("click.wav");
       clickSound.preload = "auto";
@@ -48,3 +52,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
+
+
+async function getJsonData() {
+  const res = await fetch("Azkar_Almasaa.json");
+  const data = await res.json();
+  return data;
+}
+
+async function addDateToHtml() {
+  const azkar = await getJsonData();
+  const content = document.querySelector(".page-content");
+  for (zikr of azkar) {
+    
+    content.innerHTML += `
+    <div class="page-content">
+    <div class="mt-4 totalParts circleContainer border gradient-border">
+        <div class="d-flex justify-content-between">
+
+    <span class="circle-order-btn fs-13">${zikr.max_count}</span>
+    <span class="totalDisplay circle-total-btn fs-13">0/${zikr.max_count}</span>
+    
+    </div>
+        <p class="mt-3 fs-4">${zikr.verse}</p>
+        <p class="mt-3 text-white-50 fst-italic">${zikr.Eng_trans}</p>
+        <p>${zikr.Tafsir}</p>
+        <p class="mt-3 brown-text fst-italic">${zikr.Author}</p>
+    <button class="resetBtn btn gradient-btn text-white px-4 py-2 fs-5" aria-label="Reset zikr counter"><i class="fa-solid fa-rotate-left"></i></button>
+        <button class=" countBtn btn gradient-btn text-white px-4 py-2 clickedVoiceBtn"   aria-label="Tap to count zikr repetitions">Tap to Count</button>
+    </div>
+</div>
+`
+  }
+}
