@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", async() => {
-
-      await addDateToHtml();
-      document.querySelector(".bottom-section").style.visibility = "visible";
-
+document.addEventListener("DOMContentLoaded", () => {
 
       const clickSound = new Audio("click.wav");
       clickSound.preload = "auto";
@@ -72,13 +68,8 @@ document.addEventListener("DOMContentLoaded", async() => {
     document.querySelector(".icon-title").innerHTML=` أذكار الصباح `
     document.body.classList.add('black')
     document.querySelector(".evening").innerHTML=`Morning Remembrances`
-    document.querySelector(".one").innerHTML=`Evening Remembrances`
-
 
 
   }
 
-  // Load saved theme
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-  }
+
