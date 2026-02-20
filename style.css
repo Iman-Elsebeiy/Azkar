@@ -1,11 +1,90 @@
+:root{
+
+  /* Soft warm surface (not pure white) */
+  --bg-inner: #f4f6fb;
+
+  /* Muted, calm gradient */
+  --border-gradient-start: #9aaeff;
+  --border-gradient-end: #6f8fa1;
+
+  /* Softer border tones */
+  --border-color-top: rgba(170, 160, 120, 0.6);
+  --border-color-bottom: rgba(90, 120, 140, 0.6);
+
+  /* Subtle shadow */
+  --box-shadow-color: rgba(30, 50, 80, 0.15);
+  
+    --background: linear-gradient(to bottom, #0b1026,#0b1026, #cc3656, #0b1026, #0b1026);
+
+
+  --main-color:rgb(33, 25, 25);
+  --txt_grey:rgb(80, 78, 78);
+
+
+}
+
+body {
+  background: var(--background);
+  color: var(--main-color);
+  transition: background 0.4s ease, color 0.3s ease;
+}
+
+
+.btn-modern {
+  background:  #6f8fa1;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 22px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(100, 120, 255, 0.3);
+}
+
+/* *{
+  color:var(--main-color);
+} */
+.txt_white{
+  color: var(--txt_grey);
+}
+body.dark{
+    /* Background gradients */
+  --bg-inner: #0b1026;
+  --border-gradient-start: #6a85ff;
+  --border-gradient-end: #1e4558;
+
+  /* Border colors */
+  --border-color-top: rgba(129, 110, 51, 0.85);
+  --border-color-bottom: rgba(1, 42, 63, 0.85);
+
+  /* Shadow */
+  --box-shadow-color: rgb(1, 9, 49);
+  /* background:
+    linear-gradient(#0b1026, #0b1026) padding-box, 
+    linear-gradient(135deg, #6a85ff, #1e4558) border-box;
+    border-color: rgba(129, 110, 51, 0.85) rgba(1, 42, 63, 0.85) !important;
+    box-shadow: 0 0 15px rgb(1, 9, 49);*/
+    color:white ; 
+    --background: linear-gradient(to bottom, #0b1026,#0b1026, #cc3656, #0b1026, #0b1026);
+
+
+}
 /* full screen background */
 .night-sky {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #0b1026,#0b1026, #cc3656, #0b1026, #0b1026);
+  background:var(--background);
+}
+  /* background: linear-gradient(to bottom, #0b1026,#0b1026, #cc3656, #0b1026, #0b1026); */ */
   /* overflow: hidden; */
   /* position: relative; */
+p{
+  color: var(--main-color);
 }
 
 /* stars layer */
@@ -111,12 +190,14 @@
 .gradient-border {
   border-radius: 16px;
   padding: 1rem;
-  background:
-    linear-gradient(#0b1026, #0b1026) padding-box, /* inner dark background */
-    linear-gradient(135deg, #6a85ff, #1e4558) border-box;
-    border-color: rgba(129, 110, 51, 0.85) rgba(1, 42, 63, 0.85) !important;
-    box-shadow: 0 0 15px rgb(1, 9, 49);
+  background: 
+    linear-gradient(var(--bg-inner), var(--bg-inner)) padding-box,
+    linear-gradient(135deg, var(--border-gradient-start), var(--border-gradient-end)) border-box;
 
+  border: 2px solid transparent;
+  border-color: var(--border-color-top) var(--border-color-bottom) !important;
+
+  box-shadow: 0 0 15px var(--box-shadow-color);
   transition: all 0.3s ease; /*smooth transition for border changes */
 }
 

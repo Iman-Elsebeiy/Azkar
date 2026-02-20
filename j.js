@@ -48,3 +48,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
+
+
+  function setDark() {
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+        document.querySelector(".icon").classList.add("fa-moon")
+            document.querySelector(".icon").classList.remove("fa-sun")
+    document.querySelector(".icon-title").innerHTML=`أذكار المساء `
+    document.querySelector(".evening").innerHTML=`Evening Remembrances`
+
+    }
+
+  function setLight() {
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    document.querySelector(".icon").classList.remove("fa-moon")
+    document.querySelector(".icon").classList.add("fa-sun")
+    document.querySelector(".icon-title").innerHTML=` أذكار الصباح `
+    document.body.classList.add('black')
+    document.querySelector(".evening").innerHTML=`Morning Remembrances`
+    document.querySelector(".one").innerHTML=`Evening Remembrances`
+
+
+
+  }
+
+  // Load saved theme
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
