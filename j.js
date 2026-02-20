@@ -1,4 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async() => {
+
+      await addDateToHtml();
+      document.querySelector(".bottom-section").style.visibility = "visible";
+
 
       const clickSound = new Audio("click.wav");
       clickSound.preload = "auto";
