@@ -54,32 +54,31 @@ document.addEventListener("DOMContentLoaded", async() => {
     });
 
 
-async function getJsonData() {
-  const res = await fetch("Azkar_Almasaa.json");
-  const data = await res.json();
-  return data;
-}
+  function setDark() {
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+        document.querySelector(".icon").classList.add("fa-moon")
+            document.querySelector(".icon").classList.remove("fa-sun")
+    document.querySelector(".icon-title").innerHTML=`أذكار المساء `
+    document.querySelector(".evening").innerHTML=`Evening Remembrances`
 
-async function addDateToHtml() {
-  const azkar = await getJsonData();
-  const content = document.querySelector(".page-content");
-  for (zikr of azkar) {
-    
-    content.innerHTML += `
-    <div class="mt-4 totalParts circleContainer border gradient-border">
-        <div class="d-flex justify-content-between">
+    }
 
-    <span class="circle-order-btn fs-13">${zikr.max_count}</span>
-    <span class="totalDisplay circle-total-btn fs-13">0/${zikr.max_count}</span>
-    
-    </div>
-        <p class="mt-3 fs-4">${zikr.verse}</p>
-        <p class="mt-3 text-white-50 fst-italic">${zikr.Eng_trans}</p>
-        <p>${zikr.Tafsir}</p>
-        <p class="mt-3 brown-text fst-italic">${zikr.Author}</p>
-    <button class="resetBtn btn gradient-btn text-white px-4 py-2 fs-5" aria-label="Reset zikr counter"><i class="fa-solid fa-rotate-left"></i></button>
-        <button class=" countBtn btn gradient-btn text-white px-4 py-2 clickedVoiceBtn"   aria-label="Tap to count zikr repetitions">Tap to Count</button>
-    </div>
-`
+  function setLight() {
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    document.querySelector(".icon").classList.remove("fa-moon")
+    document.querySelector(".icon").classList.add("fa-sun")
+    document.querySelector(".icon-title").innerHTML=` أذكار الصباح `
+    document.body.classList.add('black')
+    document.querySelector(".evening").innerHTML=`Morning Remembrances`
+    document.querySelector(".one").innerHTML=`Evening Remembrances`
+
+
+
   }
-}
+
+  // Load saved theme
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
