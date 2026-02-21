@@ -9,7 +9,7 @@
     "max":1
   },
   {
-    "verse": "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم\n        <br/>\nقُلْ هُوَ للَّهُ أَحَدٌ، اللَّهُ الصَّمَدُ، لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَد",
+    "verse": "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم\n        <br/>\nقُلْ هُوَ اللَّهُ أَحَدٌ، اللَّهُ الصَّمَدُ، لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَد",
     "Eng_trans": "Bismillahir-Rahmanir-Raheem. Qul Huwa Allahu Ahad, Allahus-Samad, Lam yalid wa lam yoolad, wa lam yakun lahu kufuwan ahad.",
     "Tafsir": "In the name of Allah, the Most Gracious, the Most Merciful. Say, \"He is Allah, [who is] One, Allah, the Eternal Refuge. He neither begets nor is born, Nor is there to Him any equivalent.\"",
     "Author": "— Abu Dawud, An-Nasa’ey & At-Tirmidhi",
@@ -97,7 +97,7 @@
     "Author": "— Abu Dawud",
     "order": 12,
      "min":0,
-    "max":1
+    "max":4
   },
   {
     "verse": "اللّهُـمَّ ما أَمسى بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك ، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر",
