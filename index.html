@@ -19,7 +19,7 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "Azkar Almasaa",
+  "name": "Azkar Alsabah & Almasaa",
   "description": "Evening Remembrances in Arabic, transliteration, and translation.",
   "inLanguage": ["ar","en"]
 }
@@ -37,15 +37,17 @@
   <!-- content -->
 <main class="container text-center " >
     <div class="d-flex gap-2 p-3">
-  <button id="darkBtn"  onclick="loadAzkar('evning.json'); setDark()" class="btn btn-modern"> <i class="yellow-text fa-solid fa-moon"> </i> </button>
-  <button id="lightBtn" onclick="loadAzkar('morning.json'); setLight()" class="btn btn-modern"> <i class="yellow-text fa-solid fa-sun"></i></button>
+  <button type="button" id="darkBtn"  onclick="loadAzkar('evning.json'); setDark()" class="btn btn-modern"> <i class="yellow-text fa-solid fa-moon"> </i> </button>
+  <button type="button" id="lightBtn" onclick="loadAzkar('morning.json'); setLight()" class="btn btn-modern"> <i class="yellow-text fa-solid fa-sun"></i></button>
 </div>
        
         <!-- <h1 class="moon-container moon"  aria-label="🌙 moon symbol">🌙</h1>  -->
      <h1 class="moon moon-container"  aria-label="🌙 moon symbol"><i class="icon yellow-text fa-solid "></i></h1>
     <h1 class="mt-5 icon-title mb-4 fs-1 fw-bold yellow-text">       
     </h1>
-        <img src="duaa.png" width=100px height=100px alt="Duaa image">
+    <div  class="img-container">
+        <img src="duaa.png" alt="Duaa image">
+    </div>
     <h5 class="text-light evening mb-3"> Click on the moon or the sun to</h5>
     <h6 class="text-light icon-desc">
    Recite these blessed words to seek Allah's protection and blessings
@@ -72,10 +74,10 @@
     </div> 
        <h6 class="text-dark-emphasis"> May Allah accept your worship </h6>
         <h4 class="text-light-emphasis">تقبل الله منا ومنكم          </h4>
- <div ><img src="smile.png" alt="smiley" width="60" height="60"></div>
+ <div class="img-container" ><img src="smile.png" alt="smiley"></div>
 </div>
 </main>
     <script src="Bootstrap/bootstrap.js"></script>
-    <script src="j.js"></script>
+    <script src="j.js" defer></script>
 </body>
 </html>
