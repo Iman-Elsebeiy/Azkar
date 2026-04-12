@@ -83,7 +83,7 @@
   },
   {
     "verse": "اللَّهُمَّ بِكَ  أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ",
-    "Eng_trans": "Allahumma bika Asbahna, wa bika amsayna, wa bika nahya, wa bika namootu, wa ilaykal-maseer",
+    "Eng_trans": "Allahumma bika asbahna, wa bika amsayna, wa bika nahya, wa bika namootu, wa ilaykal-maseer",
     "Tafsir": "O Allah, by Your leave we have reached the evening and by Your leave we have reached the morning, by Your leave we live and die and unto You is our return.",
     "Author": "— At-Tirmidhi & Abu Dawud",
     "order": 11,
@@ -91,8 +91,8 @@
     "max":1
   },
   {
-    "verse": "اللّهُـمَّ إِنِّـي أَمسيتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك",
-    "Eng_trans": "Allahumma inni amsaytu ush-hiduka, wa ush-hidu hamalata 'arshika, wa mala'ikataka, wa jami'a khalqika, annaka anta Allahu la ilaha illa anta wahdaka la sharika laka, wa anna Muhammadan 'abduka wa rasuluk.",
+    "verse": "اللّهُـمَّ إِنِّـي أَصْبَحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك",
+    "Eng_trans": "Allahumma inni asbahtu ush-hiduka, wa ush-hidu hamalata 'arshika, wa mala'ikataka, wa jami'a khalqika, annaka anta Allahu la ilaha illa anta wahdaka la sharika laka, wa anna Muhammadan 'abduka wa rasuluk.",
     "Tafsir": "O Allah, verily I have reached the evening and I bear witness to You, and I bear witness to the carriers of Your Throne, and to Your angels, and to all of Your creation, that You are Allah, there is no deity except You alone, without partner, and that Muhammad is Your servant and Your Messenger.",
     "Author": "— Abu Dawud",
     "order": 12,
@@ -100,8 +100,8 @@
     "max":4
   },
   {
-    "verse": "اللّهُـمَّ ما أَمسى بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك ، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر",
-    "Eng_trans": "Allahumma ma amsa bee min ni'matin aw bi ahadin min khalqika, faminka wahdaka la sharika laka, falakal-hamdu walakash-shukr.",
+    "verse": "اللّهُـمَّ ما أَصْبَح بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك ، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر",
+    "Eng_trans": "Allahumma ma asbaha bee min ni'matin aw bi ahadin min khalqika, faminka wahdaka la sharika laka, falakal-hamdu walakash-shukr.",
     "Tafsir": "O Allah, whatever blessing has been received by me or by any of Your creation this evening, is from You alone, without partner. So all praise and thanks are for You.",
     "Author": "— Abu Dawud",
     "order": 13,
