@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-  //count logic
+  //cards logic
   function attachLogic() {
 
     const containers = document.querySelectorAll('.totalParts');
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const totalDisplay = container.querySelector('.totalDisplay');
 
       let [count, maxCount] = totalDisplay.textContent.split('/').map(Number);
-
+//count
       countBtn.addEventListener('click', () => {
         if (count < maxCount) {
           count++;
@@ -90,8 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-
-      //btns 
+      //card logic and style awhile counting
       resetBtn.addEventListener('click', () => {
         count = 0;
         totalDisplay.textContent = `0/${maxCount}`;
@@ -135,14 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
  //saved theme
-  const savedTheme = localStorage.getItem("theme");
+  // const savedTheme = localStorage.getItem("theme");
 
-  if (savedTheme === "dark") {
-    setDark();
-    loadAzkar("evening.json");
-  } else {
-    setLight();
-    loadAzkar("morning.json");
-  }
+  // if (savedTheme === "dark") {
+  //   setDark();
+  //   loadAzkar("evening.json");
+  // } else {
+  //   setLight();
+  //   loadAzkar("morning.json");
+  // }
 
 });

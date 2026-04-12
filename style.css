@@ -16,7 +16,7 @@
   --background: linear-gradient(to bottom, #0b1026,#0b1026, #cc3656, #0b1026, #0b1026);
 
   --main-color:rgb(33, 25, 25);
-  --txt_grey:rgb(80, 78, 78);
+  --txt_grey:rgb(98, 97, 97);
 
 }
 
@@ -144,6 +144,7 @@ body.dark{
 
 .night-sky::before {
   content: "";
+  /* position: absolute; */
   inset: 0;
   background: radial-gradient(
     circle at 80% 20%,
@@ -338,7 +339,7 @@ body.dark{
 }
 
 .shake {
-  animation: shake .4s;
+  animation: shake 0.4s;
 }
 
 @keyframes shake {
