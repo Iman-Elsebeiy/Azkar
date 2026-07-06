@@ -1,7 +1,7 @@
 :root{
 
   /* Soft warm surface (not pure white) */
-  --bg-inner: #fcefc7;
+  --bg-inner: #f8ebc8;
   /* Muted, calm gradient */
   --border-gradient-start: #9aaeff;
   --border-gradient-end: #6f8fa1;
